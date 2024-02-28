@@ -1,0 +1,1003 @@
+/*----------------------------------
+               RESET
+----------------------------------*/
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/*----------------------------------
+             VARIABLE
+----------------------------------*/
+:root {
+    --baggrundsfarve: #F4EFE5;
+    --sort: #000000;
+    --hvid: #FFFFFF;
+
+    --lysgrå: #E5E4DE;
+    --gråbeige: #D9D1C9;
+    --beigerosa: #D9C9B8;
+    --mørkbeige: #90847A;
+    --gul: #ECC691;
+
+    --sartrosa: #E2CEC0;
+    --rosa: #DBA7A2;
+    --mørkrød: #874F50;
+    --brændtrød: #8F421E;
+
+    --sartgrøn: #C5C7AC;
+    --grøn: #AEB9A6;
+    --mørkgrøn: #5C6D58;
+}
+
+/*----------------------------------
+             BASICS
+----------------------------------*/
+body {
+    overflow-x: hidden;
+    /*SKAL MULIGVIS SLETTES*/
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--baggrundsfarve);
+}
+
+h1 {
+    font-family: 'Kumbh Sans';
+    font-size: 50px;
+    font-style: normal;
+    font-weight: lighter;
+    color: var(--sort);
+}
+
+h2 {
+    font-family: 'Kumbh Sans';
+    color: var(--sort);
+}
+
+h3 {
+    font-family: 'Kumbh Sans';
+    color: var(--sort);
+}
+
+h4 {
+    font-family: 'Kumbh Sans';
+    color: var(--sort);
+}
+
+h5 {
+    font-family: 'Kulim Park';
+    color: var(--sort);
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+p {
+    font-family: 'Kulim Park';
+    font-size: 20px;
+    color: var(--sort);
+    line-height: 50px;
+}
+
+
+/*----------------------------------
+             HEADER
+----------------------------------*/
+/*************************************
+STYLING AF HEADER STARTER HER
+*************************************/
+/* LOGO STYLING*/
+.logo {
+    width: 100px;
+}
+
+.logoburger {
+    padding: 18px;
+    display: block;
+    text-align: left;
+}
+
+/* NAVIGATIONBAR */
+.topnav {
+    overflow: hidden;
+    margin-top: -65px;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: var(--sort);
+    padding: 14px 40px;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: 'Kumbh Sans';
+}
+
+/* NAVELEMENTER */
+.nav .navnavn {
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    background-color: inherit;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.topnav a:hover,
+.nav:hover .navnavn {
+    color: var(--mørkgrøn);
+}
+
+.nav:hover {
+    display: block;
+}
+
+.login {
+    border: 3px solid var(--mørkgrøn);
+    border-radius: 8px;
+    padding: 10px;
+    display: inline-block;
+    color: var(--mørkgrøn) !important;
+}
+
+/*BURGERMENU*/
+.icon {
+    display: none;
+}
+
+/*************************************
+MEDIA QUERY FOR MINDRE SKÆRME TIL NAV
+*************************************/
+@media screen and (max-width: 1150px) {
+
+    .topnav a,
+    .nav .navnavn {
+        display: none;
+    }
+
+    .icon {
+        display: block;
+        float: right;
+        text-decoration: none;
+        color: black;
+        margin-top: 15px;
+        font-size: 30px;
+    }
+
+    .logoburger {
+        padding: 15px;
+    }
+
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav.responsive {
+        position: absolute;
+        left: 50%;
+        height: 100%;
+        width: 100%;
+        z-index: 999;
+
+    }
+
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .topnav.responsive .nav {
+        float: none;
+    }
+
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive .nav .navnavn {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+}
+
+/*************************************
+MEDIA QUERY FOR STØRRE SKÆRME TIL NAV
+*************************************/
+
+@media screen and (min-width: 1150px) {
+    .icon {
+        display: none;
+    }
+
+    .topnav {
+        display: flex;
+        /* Aktiverer flexbox */
+        justify-content: space-evenly;
+        margin-bottom: 20px;
+        padding-left: 50px;
+    }
+
+}
+
+/*----------------------------------
+             FORSIDE
+----------------------------------*/
+/*FØRSTE SEKTION*/
+.forside_intro {
+    display: flex;
+    margin: 3%;
+}
+
+.forside_intro_billeder {
+    margin: 2%;
+    transform: translateX(-100%);
+    animation-name: slide-in-left;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slide-in-left {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.forside_intro_tekstbox {
+    margin: 2%;
+    margin-top: 10%;
+}
+
+.forside_intro_tekstbox_overskrift {
+    line-height: 60px;
+    color: var(--mørkgrøn);
+    margin-bottom: 10%
+}
+
+.forside_intro_tekstbox_tekst {
+    margin-bottom: 5%;
+    line-height: 200%;
+}
+
+.forside_intro_tekstbox_button {
+    margin-top: 3%;
+    margin-left: 50%;
+    background-color: var(--mørkrød);
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: var(--baggrundsfarve);
+    font-family: 'Kulim Park';
+    font-size: larger;
+}
+
+.forside_intro_tektsbox_button p {
+    color: var(--hvid);
+}
+
+
+/* ANDEN SEKTION */
+.sektion2 {
+    background-color: var(--grøn);
+    text-align: center;
+    padding-top: 100px;
+}
+
+.sektion2_all_items_flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sektion2_items_box {
+    margin: 100px;
+}
+
+.sektion2_ikoner {
+    height: 150px;
+    padding-bottom: 50px;
+}
+
+.pot {
+    padding-left: 50px;
+}
+
+.sektion2_h3 {
+    padding-bottom: 10px;
+}
+
+.sektion2_p {
+    line-height: 30px;
+}
+
+/*TREDJE SEKTION*/
+.f_maaltidskasser_starttekst {
+    padding-left: 5%;
+    padding-top: 20%;
+}
+
+.f_maaltidskasser_starttekst h1 {
+    line-height: 130%;
+    padding-bottom: 5%;
+}
+
+.f_maaltidskasser_starttekst p {
+    line-height: 140%;
+}
+
+.f_maaltidskasser {
+    background-color: var(--beigerosa);
+    display: flex;
+    overflow: auto;
+}
+
+.f_maaltidskasser_gul {
+    background-color: var(--gul);
+    width: 500px;
+    height: 640px;
+    border-radius: 8px;
+    margin: 50px;
+}
+
+.f_maaltidskasser_beige {
+    background-color: var(--sartrosa);
+    width: 500px;
+    height: 640px;
+    border-radius: 8px;
+    margin: 50px;
+}
+
+.f_maaltidskasser_rosa {
+    background-color: var(--rosa);
+    width: 500px;
+    height: 640px;
+    border-radius: 8px;
+    margin: 50px;
+}
+
+.f_maaltidskasser_groen {
+    background-color: var(--sartgrøn);
+    width: 500px;
+    height: 640px;
+    border-radius: 8px;
+    margin: 50px;
+}
+
+.f_maaltidskasser_img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+.f_maaltidskasser_overskrift {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.f_maaltidskasser_tekst {
+    text-align: center;
+    line-height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/*FJERDE SEKTION*/
+.forside_vr {
+    background-color: var(--mørkbeige);
+}
+
+.forside_vr {
+    display: flex;
+}
+
+.forside_vr_billede {
+    margin: 2%;
+}
+
+.forside_vr_tekst {
+    margin: 2%;
+    margin-top: 10%;
+}
+
+.forside_vr_tekst_overskrift {
+    line-height: 60px;
+    margin-bottom: 10%
+}
+
+.forside_vr_tekst_tekst {
+    margin-bottom: 5%;
+    line-height: 200%;
+}
+
+/*----------------------------------
+        VORES MÅLTIDSKASSER
+----------------------------------*/
+.vm_intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vm_h1 {
+    padding: 2%;
+}
+
+.vm_intro_tekst {
+    font-size: 1.875rem;
+}
+
+.vm_intro_lilletekst {
+    padding: 1% 0;
+}
+
+.vm_intro_button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 8px;
+    background-color: var(--mørkgrøn);
+    padding: 0.2% 2%;
+}
+
+.vm_intro_button img {
+    padding: 2%;
+    width: 15%;
+}
+
+.vm_intro_button_tekst {
+    font-size: 1rem;
+    color: var(--baggrundsfarve);
+}
+
+.vm_maaltidskasser {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.vm_maaltidskasser_gul {
+    background-color: var(--gul);
+    width: 500px;
+    height: 640px;
+    border-radius: 8px;
+    margin: 50px;
+    transition: 0.3s ease;
+}
+
+.vm_maaltidskasser_gul:hover {
+    transform: scale(1.1);
+}
+
+.vm_maaltidskasser_beige:hover {
+    transform: scale(1.1);
+}
+
+.vm_maaltidskasser_rosa:hover {
+    transform: scale(1.1);
+}
+
+.vm_maaltidskasser_groen:hover {
+    transform: scale(1.1);
+}
+
+.vm_maaltidskasser_beige {
+    background-color: var(--sartrosa);
+    width: 500px;
+    height: 640px;
+    border-radius: 8px;
+    margin: 50px;
+    transition: 0.3s ease;
+}
+
+.vm_maaltidskasser_rosa {
+    background-color: var(--rosa);
+    width: 500px;
+    height: 640px;
+    border-radius: 8px;
+    margin: 50px;
+    transition: 0.3s ease;
+}
+
+.vm_maaltidskasser_groen {
+    background-color: var(--sartgrøn);
+    width: 500px;
+    height: 640px;
+    border-radius: 8px;
+    margin: 50px;
+
+}
+
+.vm_maaltidskasser_img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 23.5px;
+}
+
+.vm_maaltidskasser_overskrift {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.vm_maaltidskasser_tekst {
+    text-align: center;
+    line-height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/*----------------------------------
+        SÅDAN FUNGERER DET
+----------------------------------*/
+.helerejsen_billede img {
+    width: 70%;
+}
+
+.helerejsen_billede {
+    display: flex;
+    justify-content: center;
+}
+
+.saadan_intro {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.saadan_outro_button_tekst {
+    font-family: 'Kumbh Sans';
+    font-size: 1rem;
+    color: var(--gråbeige);
+}
+
+.saadan_outro_button {
+    background-color: var(--mørkbeige);
+    padding: 1% 1%;
+    border-radius: 8px;
+}
+
+.saadan_outro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+}
+
+.saadan_outro_tekst {
+    padding: 2%;
+}
+
+/*----------------------------------
+            OM NIPPON
+----------------------------------*/
+.on_h1 {
+    text-align: center;
+    padding: 50px;
+}
+
+.on_introtekst {
+    margin-left: 80px;
+    margin-right: 80px;
+    line-height: 50px;
+}
+
+.on_flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 80px;
+    margin-right: 80px;
+    padding-top: 100px;
+}
+
+.japantekst {
+    line-height: 50px;
+    padding: 50px;
+}
+
+.h2_japanifokus {
+    color: var(--mørkbeige);
+}
+
+.h2_japanskmad {
+    color: var(--mørkgrøn);
+}
+
+.h2_japanskeværdier {
+    color: var(--brændtrød);
+}
+
+/*Billder slider ind fra siden*/
+.nippon_venstre {
+    transform: translateX(-100%);
+    animation-name: slide-in-left;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slide-in-left {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.nippon_hoejre {
+    transform: translateX(100%);
+    animation-name: slide-in-right;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slide-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/*----------------------------------
+               FAQ
+----------------------------------*/
+/* Øverste content */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.container>* {
+    margin: 30px 0;
+}
+
+.input_soeg[type=text] {
+    width: 900px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: var(--hvid);
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+}
+
+/* Accordion */
+.accordion {
+    background-color: var(--baggrundsfarve);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    transition: 0.4s;
+    border-bottom: solid black 1px;
+}
+
+.active,
+.accordion:hover {
+    background-color: var(--gråbeige);
+}
+
+.accordion:after {
+    content: '\002B';
+    color: black;
+    font-size: xx-large;
+    float: right;
+    margin-left: 10px;
+    right: 20px;
+    transform: translateY(-80%);
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.panel {
+    padding: 0 20px;
+    margin: 10px;
+    margin-bottom: 30px;
+    background-color: var(--baggrundsfarve);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+/* Chat funktion */
+.open-button {
+    background-color: var(--mørkrød);
+    color: var(--hvid);
+    padding: 16px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+}
+
+.chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    border-radius: 8px;
+    z-index: 9;
+}
+
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: var(--hvid);
+}
+
+.form-container textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: var(--lysgrå);
+    resize: none;
+    min-height: 200px;
+}
+
+.form-container textarea:focus {
+    outline: none;
+    border-radius: 8px;
+}
+
+.form-container .btn {
+    background-color: var(--mørkgrøn);
+    color: var(--hvid);
+    padding: 16px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.form-container .cancel {
+    background-color: var(--mørkrød);
+}
+
+.form-container .btn:hover,
+.open-button:hover {
+    opacity: 1;
+}
+
+/*************************************
+MEDIA QUERY FOR MINDRE SKÆRME TIL FAQ
+*************************************/
+
+@media (max-width: 480px) {
+    input[type=text] {
+        width: auto;
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+/*----------------------------------
+              LOGIN
+----------------------------------*/
+.body_login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Kulim Park';
+    line-height: 1.5;
+    min-height: 100vh;
+    background: #f3f3f3;
+    flex-direction: column;
+    margin: 0;
+}
+
+.main_login {
+    background-color: var(--hvid);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    transition: transform 0.2s;
+    width: 500px;
+    text-align: center;
+}
+
+
+.login_label {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #555;
+    font-weight: bold;
+}
+
+
+.login_input {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.login_button {
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;
+    color: var(--hvid);
+    cursor: pointer;
+    background-color: var(--mørkgrøn);
+    width: 100%;
+    font-size: 16px;
+}
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*----------------------------------
+             404 SITE
+----------------------------------*/
+.kasse404 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 15%;
+}
+
+.tekstkasse404 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5%;
+}
+
+.fylddentekst {
+    padding: 10% 0;
+    font-weight: 400;
+}
+
+.buttontekst404 {
+    font-family: 'Kulim Park';
+    color: var(--baggrundsfarve);
+    font-size: 1rem;
+    text-align: center;
+}
+
+.button404 {
+    border-radius: 8px;
+    background-color: var(--mørkrød);
+    padding: 3% 7%;
+}
+
+.flex404 {
+    display: flex;
+    align-items: center;
+}
+
+/*----------------------------------
+              FOOTER
+----------------------------------*/
+.footer1_flex {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    margin-top: 100px;
+    justify-content: space-evenly;
+}
+
+.footer2_flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+}
+
+.flex_div {
+    padding: 50px 50px 10px 50px;
+}
+
+li {
+    text-decoration: none;
+}
+
+ul li a {
+    text-decoration: none;
+    font-family: 'Kulim Park';
+    font-size: 20px;
+    color: var(--sort);
+    line-height: 40px;
+}
+
+.formular_flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.formular_flex input {
+    width: 300px;
+    height: 40px;
+    background-color: var(--gråbeige);
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.formular_flex [value] {
+    padding: 0 2%;
+}
+
+.formular_flex [value=SØG] {
+    color: #7F7E7E;
+}
+
+.formular_flex button {
+    width: 80px;
+    height: 40px;
+    margin: 0 2%;
+    background-color: var(--gråbeige);
+    border: none;
+    border-radius: 8px;
+}
+
+.nyhedsbrev h5 {
+    text-align: center;
+    padding: 0 0 7% 0;
+    text-decoration: none;
+}
+
+.no-bullets {
+    list-style-type: none;
+}

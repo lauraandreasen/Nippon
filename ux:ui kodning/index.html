@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <!-- Meta description-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="maeltidskassen Nippon" content="japansk inspireret maeltidskasse">
+    <meta name="keywords"
+        content="mad, japansk mad, sund mad, måltidskasser, vægttab, vegetar, hver anden uge, vegansk, studerende, en person, marked, pres, sundt, kendetegn, drikker, japansk livstil, japansk madkultur, Japan, madlavning">
+    <meta name="author" content="Emma Ewan, Mette Fonnesbæk, Laura Andreasen, Karoline Deleuran">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <!-- Google fonts -->
+    <link href="https://fonts.cdnfonts.com/css/kumbh-sans" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/kulim-park" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="/img/logo.png">
+    <!-- Sidens titel -->
+    <title>Nippon | Vores måltidskasser</title>
+</head>
+
+<body>
+    <!-- Header starter her -->
+    <header>
+        <!-- Navigationsbar -->
+        <div class="navigationsbar">
+            <div class="logoburger">
+                <a href="index.html"><img class="logo" src="img/logo.png" alt="Nippons logo"></a>
+                <a href="#" class="icon" onclick="myFunction()">&#9776;</a>
+            </div>
+            <div class="topnav" id="myTopnav">
+                <a href="voresmaaltidskasser.html">VORES MÅLTIDSKASSER</a>
+                <a href="saadanfungererdet.html">SÅDAN FUNGERER DET</a>
+                <a href="omnippon.html">OM NIPPON</a>
+                <a href="faq.html">FAQ</a>
+                <a class="login" href="login.html">LOGIN</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main starter her -->
+    <main>
+        <!-- Sektion 1: Velkommen til Nippon -->
+        <div class="forside_intro">
+            <div class="forside_intro_billeder">
+                <img src="img/forsidebillede1.png" alt="forsidebillede med et japansk madbord" id="slide-in-image"
+                    class="slide-in">
+            </div>
+
+            <div class="forside_intro_tekstbox">
+                <h1 class="forside_intro_tekstbox_overskrift">VELKOMMEN TIL NIPPON MÅLTIDSKASSE</h1>
+                <p class="forside_intro_tekstbox_tekst">Dette er din nøgle til at gøre hverdagen lettere og mere
+                    smagfuld! Med Nippon får du en sund måltidskasse med japansk inspireret mad, lækre eksotiske
+                    ingredienser og friske økologiske råvarer.</p>
+                <button class="forside_intro_tekstbox_button" onclick="window.location.href='voresmaaltidskasser.html'">
+                    Bestil din første måltidskasse
+                </button>
+            </div>
+        </div>
+
+        <!-- Sektion 2: Hvorfor vælge Nippon -->
+        <div class="sektion2">
+            <h1>HVORFOR VÆLGE NIPPON?</h1>
+            <div class="sektion2_all_items_flex">
+                <div class="sektion2_items_box">
+                    <img src="img/ur.png" alt="" class="sektion2_ikoner">
+                    <h3 class="sektion2_h3">TIDSBESPARELSE</h3>
+                    <p class="sektion2_p">Få mere tid i hverdagen til at lave det du elsker!</p>
+                </div>
+                <div class="sektion2_items_box">
+                    <img src="img/pot.png" alt="" class="sektion2_ikoner pot">
+                    <h3 class="sektion2_h3">NEM MADLAVNING</h3>
+                    <p class="sektion2_p">Få sunde og næringsrige måltider til aftensmad</p>
+                </div>
+                <div class="sektion2_items_box">
+                    <img src="img/world.png" alt="" class="sektion2_ikoner">
+                    <h3 class="sektion2_h3">MANGFOLDIGHED</h3>
+                    <p class="sektion2_p">Udvid din horisont ved at prøve mad fra en anden kultur</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sektion 3: Vores måltidskasser -->
+        <div class="f_maaltidskasser">
+
+            <div class="f_maaltidskasser_starttekst">
+                <h1>SE VORES MÅLTIDSKASSER</h1>
+                <p>Se vores udvalg af de lækre måltidskasser. Her er nogle for enhver smag. </p>
+
+            </div>
+            <div class="f_maaltidskasser_gul">
+                <img class="f_maaltidskasser_img" src="img/dennemme.png" alt="Billede af den nemme kasse">
+                <h2 class="f_maaltidskasser_overskrift">DEN NEMME KASSE</h2>
+                <p class="f_maaltidskasser_tekst">Fra velsmagende wokretter til lækre pastaretter med et twist af
+                    Japan, tilbyder den nemme måltidskasse et udvalg af hurtige og nemme måltider, der passer til
+                    din
+                    travle hverdag.</p>
+            </div>
+            <div class="f_maaltidskasser_beige">
+                <img class="f_maaltidskasser_img" src="img/pescetar.png" alt="Billede af pescetarkassen">
+                <h2 class="f_maaltidskasser_overskrift">PESCETARKASSEN</h2>
+                <p class="f_maaltidskasser_tekst">Måltidskassen tilbyder en varieret menu med ekstra fokus på
+                    friske
+                    råvarer og fisk/skaldyr. Her får du altså en sund og velsmagende oplevelse for dem, der
+                    foretrækker
+                    en pescetarisk livsstil.</p>
+            </div>
+
+            <div class="f_maaltidskasser_rosa">
+                <img class="f_maaltidskasser_img" src="img/favorit.png" alt="Billede af favoritkassen">
+                <h2 class="f_maaltidskasser_overskrift">FAVORITKASSEN</h2>
+                <p class="f_maaltidskasser_tekst">Favoritkassen er vores mest populære valg. Den tilbyder smagfulde
+                    favoritter og enkle opskrifter. Med nøje udvalgte ingredienser og lette opskrifter gør
+                    favoritkassen
+                    det let for dig at nyde dine yndlingsmåltider derhjemme.</p>
+            </div>
+
+            <div class="f_maaltidskasser_groen">
+                <img class="f_maaltidskasser_img" src="img/densunde.png" alt="Billede af den sunde kasse">
+                <h2 class="f_maaltidskasser_overskrift">DEN SUNDE KASSE</h2>
+                <p class="f_maaltidskasser_tekst">Nippons sunde måltidskasse tilbyder japansk inspirerede retter
+                    med
+                    fokus på friske og næringsrige ingredienser. Fra sushi til miso-suppe, leverer den en autentisk
+                    smagsoplevelse, der kombinerer tradition og sundhed.</p>
+            </div>
+        </div>
+
+        <!-- Sektion 4: Vores råvarer -->
+        <div class="forside_vr">
+            <div class="forside_vr_billede">
+                <img src="img/skaale.png" alt="Bord med mad i skåle">
+            </div>
+
+            <div class="forside_vr_tekst">
+                <h1 class="forside_vr_tekst_overskrift">VORES RÅVARER</h1>
+                <p class="forside_vr_tekst_tekst">Nippons råvarer er nøje udvalgt med fokus på kvalitet, økologi
+                    og
+                    smag. Vi stræber efter at tilbyde ingredienser af højeste standart som ikke kun er gode for
+                    vores kroppe, men også for miljøet.</p>
+
+                <button class="forside_intro_tekstbox_button" onclick="window.location.href='omnippon.html'">
+                    Læs mere om Nippon
+                </button>
+            </div>
+        </div>
+    </main>
+    <!-- Footer starter her -->
+    <footer>
+        <!-- Øverste flexbox -->
+        <div class="footer1_flex">
+            <!-- Nyhedsbrev -->
+            <div class="nyhedsbrev flex_div">
+                <h5>NYHEDSBREV</h5>
+                <div class="formular_flex">
+                    <form>
+                        <input type="text" name="fname" placeholder="E-MAIL"><br>
+                    </form>
+                    <button type="button" onclick="alert('Du er nu tilmeldt nyhedsbrevet')">SEND</button>
+                </div>
+            </div>
+            <!-- Support -->
+            <div class="support flex_div">
+                <h5>SUPPORT</h5>
+                <ul class="no-bullets">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Levering</a></li>
+                    <li><a href="#">Kundeservice</a></li>
+                    <li><a href="#">Gavekort</a></li>
+                </ul>
+            </div>
+            <!-- Socials -->
+            <div class="socials flex_div">
+                <h5>SOCIALS</h5>
+                <ul class="no-bullets">
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Tik Tok</a></li>
+                </ul>
+            </div>
+            <!-- Info -->
+            <div class="info flex_div">
+                <h5>INFO</h5>
+                <ul class="no-bullets">
+                    <li><a href="#">Vilkår og betingelser</a></li>
+                    <li><a href="#">Job hos Nippon</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Nederste flexbox -->
+        <div class="footer2_flex">
+            <div>
+                <img src="img/footerbillede.png" alt="">
+            </div>
+            <div class="formular_flex">
+                <form>
+                    <input type="text" name="fname" placeholder="Søg her"><br>
+                </form>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
